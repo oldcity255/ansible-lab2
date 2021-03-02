@@ -1,20 +1,23 @@
 - hosts: web
   become: yes
+  vars:
+    webserver: httpd
+    webserver_root_dir: /var/www/html
   tasks:
   - name: Install apache packages
     yum:
-      name: httpd
+      name: "{{ webserver }}"
       state: present
   - name: ensure httpd is running
     service:
-      name: httpd
+      name: "{{ webserver }}"
       state: started
       enabled: yes
   - name: webserver root directory exists
     file:
-      path: /var/www/html
+      path: "{{ webserver_root_dir }}"
       state: directory
   - name: static website is deployed
     uri:
-      url: https://raw.githubusercontent.com/oldcity255/ansible-lab2/main/index.html
-      dest: /var/www/html
+      url: https://raw.githubusercontent.com/sprintqaDevOps/ansible/main/playbooks/index.html
+      dest: "{{ webserver_root_dir }}"
