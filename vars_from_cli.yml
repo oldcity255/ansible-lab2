@@ -20,6 +20,6 @@
     uri:
       url: https://raw.githubusercontent.com/oldcity255/ansible-lab2/main/index.html
       dest: "{{ webserver_root_dir }}"
- - name: debug
-    debug:
-      msg: "webserver is {{ webserver }}"
+  - name: debug
+      debug:
+        msg: "webserver is {{ webserver }}"
