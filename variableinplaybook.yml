@@ -19,5 +19,5 @@
       state: directory
   - name: static website is deployed
     uri:
-      url: https://raw.githubusercontent.com/sprintqaDevOps/ansible/main/playbooks/index.html
+      url: https://raw.githubusercontent.com/oldcity255/ansible-lab2/main/index.html
       dest: "{{ webserver_root_dir }}"
