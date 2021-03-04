@@ -4,7 +4,7 @@
     webserver:
       type: httpd
       root_dir: /var/www/html
-    webserver:
+    dbserver:
       type: mysql
       root_dir: /var/mysql/db
   tasks:
