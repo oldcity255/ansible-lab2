@@ -6,11 +6,11 @@
   tasks:
   - name: Install apache packages
     yum:
-      name: "{{ webserver }}"
+      name: "{{webserver}}"
       state: present
   - name: ensure httpd is running
     service:
-      name: "{{ webserver }}"
+      name: "{{webserver}}"
       state: started
       enabled: yes
   - name: webserver root directory exists
