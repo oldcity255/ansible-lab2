@@ -13,7 +13,7 @@
 
 
 - name: template module
-  hosts: ubuntu
+  hosts: db
   tasks:
   - name: report is generated on hosts 
     template:
