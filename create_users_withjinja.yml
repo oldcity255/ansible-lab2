@@ -1,5 +1,5 @@
 - name: create username and set passwd for new hires
-  hosts: ubuntu
+  hosts: db
   become: yes
   vars_files:
   - vars/newhires.yml
