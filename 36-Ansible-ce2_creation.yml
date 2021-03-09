@@ -9,5 +9,5 @@
       image: ami-0bda785b0bac126e4
       key_name: my_n_virginia_key
       region: us-east-1
-      tags:
-        Envinronment: web
+      wait: yes
+     
